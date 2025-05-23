@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Assignment 5</title>
-
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css"
       rel="stylesheet"
@@ -47,11 +46,15 @@
               <div>
                 <img src="./assets/checkbox.png" alt="" />
               </div>
-              <div class="font-bold text-3xl">23</div>
+              <div id="increase-number" class="font-bold text-3xl">23</div>
             </div>
             <div id="random-theme" class="bg-[#F4F7FF] rounded-full p-3">
               <div>
-                <img src="./assets/theme-btn.png" class="cursor-pointer"  alt="" />
+                <img
+                  src="./assets/theme-btn.png"
+                  class="cursor-pointer"
+                  alt=""
+                />
               </div>
             </div>
           </div>
@@ -72,11 +75,12 @@
                 </div>
                 <div>
                   <h4 class="font-medium text-base">Task Assigned</h4>
-                  <div class="font-bold text-3xl">05</div>
+                  <div id="reduce-num" class="font-bold text-3xl">06</div>
                 </div>
               </div>
 
-              <div id="new"
+              <div
+                id="new"
                 class="bg-gradient-to-r from-[#3752FD] to-[#9BA8F8] flex gap-5 justify-center items-center p-7 rounded-xl w-[60%] cursor-pointer"
               >
                 <div>
@@ -94,7 +98,9 @@
                 </div>
                 <div>
                   <h3 class="font-medium text-base hidden">Wed ,</h3>
-                  <p id="current-date" class="font-bold text-xl">July 28 2025</p>
+                  <p id="current-date" class="font-bold text-xl">
+                    July 28 2025
+                  </p>
                 </div>
               </div>
             </div>
@@ -124,7 +130,7 @@
                   </div>
                   <div>
                     <button
-                      class="bg-[#3752FD] p-3 rounded-xl font-medium text-sm text-[#ffffff]"
+                      class="bg-[#3752FD] p-3 rounded-xl font-medium text-sm text-[#ffffff] all-btn"
                     >
                       Completed
                     </button>
@@ -151,7 +157,7 @@
                   </div>
                   <div>
                     <button
-                      class="bg-[#3752FD] p-3 rounded-xl font-medium text-sm text-[#ffffff]"
+                      class="bg-[#3752FD] p-3 rounded-xl font-medium text-sm text-[#ffffff] all-btn"
                     >
                       Completed
                     </button>
@@ -179,7 +185,7 @@
                   </div>
                   <div>
                     <button
-                      class="bg-[#3752FD] p-3 rounded-xl font-medium text-sm text-[#ffffff]"
+                      class="bg-[#3752FD] p-3 rounded-xl font-medium text-sm text-[#ffffff] all-btn"
                     >
                       Completed
                     </button>
@@ -207,7 +213,7 @@
                   </div>
                   <div>
                     <button
-                      class="bg-[#3752FD] p-3 rounded-xl font-medium text-sm text-[#ffffff]"
+                      class="bg-[#3752FD] p-3 rounded-xl font-medium text-sm text-[#ffffff] all-btn"
                     >
                       Completed
                     </button>
@@ -235,7 +241,7 @@
                   </div>
                   <div>
                     <button
-                      class="bg-[#3752FD] p-3 rounded-xl font-medium text-sm text-[#ffffff]"
+                      class="bg-[#3752FD] p-3 rounded-xl font-medium text-sm text-[#ffffff] all-btn"
                     >
                       Completed
                     </button>
@@ -263,7 +269,7 @@
                   </div>
                   <div>
                     <button
-                      class="bg-[#3752FD] p-3 rounded-xl font-medium text-sm text-[#ffffff]"
+                      class="bg-[#3752FD] p-3 rounded-xl font-medium text-sm text-[#ffffff] all-btn"
                     >
                       Completed
                     </button>
@@ -279,9 +285,7 @@
                   <div>
                     <img src="./assets/activity.png" class="w-6" alt="" />
                   </div>
-                  <h3 class="font-medium text-xl text-center">
-                    Activity Log
-                  </h3>
+                  <h3 class="font-medium text-xl text-center">Activity Log</h3>
                 </div>
                 <div
                   class="border-b border-dashed border-gray-400 mt-6 mb-6 w-full pb-6 text-center"
@@ -292,6 +296,7 @@
                     Clear History
                   </button>
                 </div>
+                <div id="new-div"></div>
               </div>
 
               <!-- <div class="border-b border-dashed border-gray-400 mt-6 mb-6 "></div> -->
@@ -302,6 +307,5 @@
     </main>
 
     <script src="./script/main.js"></script>
-
   </body>
 </html>
