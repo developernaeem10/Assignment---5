@@ -36,18 +36,21 @@ const crDate = new Date();
 // const month = crDate.getMonth() + 1;
 // const year = crDate.getFullYear();
 
+
 const options = {
   weekday: "short",
   year: "numeric",
   month: "short",
-  day: "numeric",
+  day: "numeric"
 };
 
-const formattedDateString = crDate.toLocaleDateString("en-CA", options);
+const formattedDateString = crDate
+  .toLocaleDateString("en-CA", options)
+  .replace(",", "");
 document.getElementById("current-date").innerText = formattedDateString;
 
 // Main
-let click = 0
+let click = 0;
 const allBtn = document.querySelectorAll(".all-btn");
 for (const btn of allBtn) {
   btn.addEventListener("click", function (event) {
@@ -56,7 +59,8 @@ for (const btn of allBtn) {
     event.target.classList.remove("cursor-pointer");
     event.target.classList.add("cursor-not-allowed");
     event.target.classList.add("bg-gray-200");
-    const ttl = event.target.parentNode.parentNode.parentNode.children[1].innerText
+    const ttl =
+      event.target.parentNode.parentNode.parentNode.children[1].innerText;
 
     // btn.setAttribute("disabled", true);
     // btn.classList.remove("cursor-pointer");
@@ -79,16 +83,16 @@ for (const btn of allBtn) {
       "p-2",
       "font-bold",
       "text-md",
-      "mb-3",
+      "mb-8",
       "bg-[#F4F7FF]",
       "rounded-xl"
     );
     p.textContent = `You have completed the task ${ttl} at ${crDate.toLocaleTimeString()} 
     `;
     newDiv.appendChild(p);
-    click = click + 1
+    click = click + 1;
     if (click === 6) {
-      alert('hello')
+      alert("Congrates!!!  You have completed all the current task");
     }
 
     document
