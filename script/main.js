@@ -49,24 +49,50 @@ document.getElementById("current-date").innerText = formattedDateString;
 // Main
 const allBtn = document.querySelectorAll(".all-btn");
 for (const btn of allBtn) {
-  btn.addEventListener("click", function () {
+  btn.addEventListener("click", function (event) {
     alert("Board Updated Successfully");
+    event.target.setAttribute("disabled", true);
+    event.target.classList.remove("cursor-pointer");
+    event.target.classList.add("cursor-not-allowed");
+    event.target.classList.add("bg-gray-200");
+    
+    // btn.setAttribute("disabled", true);
+    // btn.classList.remove("cursor-pointer");
+    // btn.classList.add("cursor-not-allowed");
+    // btn.classList.add("bg-gray-200");
+    
     const reduceNum = document.getElementById("reduce-num").innerText;
     const convertedReduceNum = parseFloat(reduceNum);
     const minus = convertedReduceNum - 1;
     document.getElementById("reduce-num").innerText = minus;
-
+    
     const increaseNum = document.getElementById("increase-number").innerText;
     const convertedIncreaseNum = parseFloat(increaseNum);
-    const increase = convertedIncreaseNum + 1
-    document.getElementById("increase-number").innerText = increase
+    const increase = convertedIncreaseNum + 1;
+    document.getElementById("increase-number").innerText = increase;
+    
+    const newDiv = document.getElementById("new-div");
+    // // console.log(newDiv.childNodes.length);
+    // if (newDiv.childNodes.length === 6) {
+    //   return alert("hello");
+    // }
+    const p = document.createElement("p");
+    p.classList.add("p-2", "text-sm", "text-md", "mb-3", "bg-[#F4F7FF]");
+    p.textContent = `You have completed the task
+    `;
+    newDiv.appendChild(p);
 
-    const newDiv = document.getElementById('new-div')
-    const div = document.createElement('div')
-    div.innerHTML = `<p>You have completed the task</p>
-    `
-    newDiv.appendChild(div)
+    document
+      .getElementById("clear-history")
+      .addEventListener("click", function () {
+        document.getElementById("new-div").innerHTML = "";
+      });
 
+    // const titles = document.querySelectorAll('.title-show')
+    // for (const title of titles ){
+    //   const ttl = title.textContent
+    //   return ttl
+    // }
 
     // div.innerText = 'dgdfgd'
     // newDiv.appendChild(div)
