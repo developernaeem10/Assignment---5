@@ -1,5 +1,5 @@
 document.getElementById("new").addEventListener("click", function () {
-  window.location.href = "./blog.html";
+  window.location.href = "blog.html";
 });
 
 // Body theme Change
